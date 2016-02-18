@@ -1,0 +1,3 @@
+D:\workspace\餐厅管家\RMS\RMS_PPC 3\obj\Release\ResolveAssemblyReference.cache
+D:\workspace\餐厅管家\RMS\RMS_PPC 3\obj\Release\RMS_PPC_3.Form1.resources
+D:\workspace\餐厅管家\RMS\RMS_PPC 3\obj\Release\RMS_PPC 3.csproj.GenerateResource.Cache

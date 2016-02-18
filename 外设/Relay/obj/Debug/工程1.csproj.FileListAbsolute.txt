@@ -1,0 +1,6 @@
+D:\Project\Caesar_System\RMS\trunk\外设\Relay\obj\Debug\Interop.MSCommLib.dll
+D:\Project\Caesar_System\RMS\trunk\外设\Relay\obj\Debug\AxInterop.MSCommLib.dll
+D:\Project\Caesar_System\RMS\trunk\外设\Relay\obj\Debug\工程1.csproj.ResolveComReference.cache
+D:\Project\Caesar_System\RMS\trunk\外设\Relay\obj\Debug\ResolveAssemblyReference.cache
+D:\Project\Caesar_System\RMS\trunk\外设\Relay\obj\Debug\工程1.main_form.resources
+D:\Project\Caesar_System\RMS\trunk\外设\Relay\obj\Debug\工程1.csproj.GenerateResource.Cache

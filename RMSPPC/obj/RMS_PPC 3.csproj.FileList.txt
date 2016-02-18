@@ -1,0 +1,14 @@
+bin\Release\RMS_PPC 3.exe.config
+bin\Release\RMS_PPC 3.exe
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\RMS_PPC_3.Form1.resources
+obj\Release\RMS_PPC 3.csproj.GenerateResource.Cache
+obj\Release\RMS_PPC 3.exe
+bin\Debug\RMS_PPC 3.exe.config
+bin\Debug\RMS_PPC 3.exe
+bin\Debug\RMS_PPC 3.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\RMS_PPC_3.Form1.resources
+obj\Debug\RMS_PPC 3.csproj.GenerateResource.Cache
+obj\Debug\RMS_PPC 3.exe
+obj\Debug\RMS_PPC 3.pdb

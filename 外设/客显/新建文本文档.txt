@@ -1,0 +1,156 @@
+POS 客显 设备 显示 总价 单价 找零 收款 C# SerialPort 法 
+2009-08-13 14:30
+   ---------------------------控制台程序----------------------
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.IO.Ports;
+
+namespace EAD.POS
+{
+class SerialPortOutput
+{
+/// <summary>
+/// 总计
+/// </summary>
+/// <param name="value">The value.</param>
+public static void Sum(string value)
+{
+Clear();
+//收款();
+//找零();
+newData(value);
+总计();
+}
+/// <summary>
+/// 单价
+/// </summary>
+/// <param name="value">The value.</param>
+public static void UnitPrice(string value)
+{
+Clear();
+newData(value);
+单价();
+}
+/// <summary>
+/// 收款
+/// </summary>
+/// <param name="value">The value.</param>
+public static void Get(string value)
+{
+Clear();
+newData(value);
+收款();
+}
+/// <summary>
+/// 找零
+/// </summary>
+/// <param name="value">The value.</param>
+public static void change(string value)
+{
+Clear();
+newData(value);
+找零();
+}
+/// <summary>
+///全暗.是找零 全价 收款 这几个灯
+/// </summary>
+public static void AllBlack()
+{
+SerialPort serialPort1 = new SerialPort();
+serialPort1.PortName = "COM1";
+serialPort1.BaudRate = 2400;
+serialPort1.Open();
+serialPort1.WriteLine(@" s0");
+serialPort1.Close();
+}
+/// <summary>
+/// 清屏.
+/// </summary>
+public static void Clear()
+{
+SerialPort serialPort1 = new SerialPort();
+serialPort1.PortName = "COM1";
+serialPort1.BaudRate = 2400;
+serialPort1.Open();
+serialPort1.WriteLine("\f");
+serialPort1.Close();
+}
+private static void 单价()
+{
+SerialPort serialPort1 = new SerialPort();
+serialPort1.PortName = "COM1";
+serialPort1.BaudRate = 2400;
+serialPort1.Open();
+serialPort1.WriteLine(" s1");//其实有数据的那个空格
+serialPort1.Close();
+}
+private static void 总计()
+{
+SerialPort serialPort1 = new SerialPort();
+serialPort1.PortName = "COM1";
+serialPort1.BaudRate = 2400;
+serialPort1.Open();
+serialPort1.WriteLine(@" s2");
+serialPort1.Close();
+}
+private static void 收款()
+{
+SerialPort serialPort1 = new SerialPort();
+serialPort1.PortName = "COM1";
+serialPort1.BaudRate = 2400;
+serialPort1.Open();
+serialPort1.WriteLine(@" s3");
+serialPort1.Close();
+}
+private static void 找零()
+{
+SerialPort serialPort1 = new SerialPort();
+serialPort1.PortName = "COM1";
+serialPort1.BaudRate = 2400;
+serialPort1.Open();
+serialPort1.WriteLine(@" s4");
+serialPort1.Close();
+}
+private static void newData(string data)
+{
+SerialPort serialPort1 = new SerialPort();
+serialPort1.PortName = "COM1";
+serialPort1.BaudRate = 2400;
+serialPort1.Open();
+serialPort1.WriteLine(@" QA" + data);
+serialPort1.Close();
+}
+
+    }
+}
+---------------------------控制台程序----------------------
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+using EAD.POS;
+namespace ConsoleApplication2
+{
+class Program
+{
+static void Main(string[] args)
+{
+for (; ; )
+{
+SerialPortOutput.Clear();
+System.Threading.Thread.Sleep(2000);
+SerialPortOutput.change("21230.34");
+System.Threading.Thread.Sleep(2000);
+SerialPortOutput.Get("230.34");
+System.Threading.Thread.Sleep(2000);
+SerialPortOutput.Sum("99230.34");
+System.Threading.Thread.Sleep(2000);
+SerialPortOutput.UnitPrice("30.34");
+System.Threading.Thread.Sleep(2000);
+}
+
+        }
+}
+}

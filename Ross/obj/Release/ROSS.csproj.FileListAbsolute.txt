@@ -1,0 +1,6 @@
+D:\workspace\餐厅管家\RMS\Ross\bin\Web.config
+D:\workspace\餐厅管家\RMS\Ross\bin\ROSS.dll
+D:\workspace\餐厅管家\RMS\Ross\bin\ROSS.pdb
+D:\workspace\餐厅管家\RMS\Ross\obj\Release\ResolveAssemblyReference.cache
+D:\workspace\餐厅管家\RMS\Ross\obj\Release\ROSS.dll
+D:\workspace\餐厅管家\RMS\Ross\obj\Release\ROSS.pdb

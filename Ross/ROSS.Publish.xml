@@ -1,0 +1,44 @@
+<publishData>
+  <publishTarget publishUrl="D:\Apps\Web_Services\">
+    <file relUrl="ROSS.asmx" publishTime="12/06/2010 23:48:07" />
+    <file relUrl="bin/.svn/prop-base/ROSS.pdb.svn-base" publishTime="12/06/2010 23:48:06" />
+    <file relUrl="bin/ROSS.pdb" publishTime="01/05/2011 12:15:52" />
+    <file relUrl="bin/Web.config" publishTime="12/06/2010 23:48:07" />
+    <file relUrl="Web.config" publishTime="12/06/2010 23:48:07" />
+    <file relUrl="bin/.svn/all-wcprops" publishTime="12/06/2010 23:48:06" />
+    <file relUrl="bin/.svn/text-base/ROSS.dll.svn-base" publishTime="12/06/2010 23:48:06" />
+    <file relUrl="bin/.svn/entries" publishTime="12/06/2010 23:48:06" />
+    <file relUrl="bin/.svn/text-base/ROSS.pdb.svn-base" publishTime="12/06/2010 23:48:06" />
+    <file relUrl="bin/.svn/text-base/Web.config.svn-base" publishTime="12/06/2010 23:48:06" />
+    <file relUrl="bin/ROSS.dll" publishTime="01/05/2011 12:15:53" />
+    <file relUrl="bin/.svn/prop-base/ROSS.dll.svn-base" publishTime="12/06/2010 23:48:06" />
+  </publishTarget>
+  <publishTarget publishUrl="C:\Web_Services\">
+    <file relUrl="bin/ROSS.pdb" publishTime="11/25/2010 08:02:47" />
+    <file relUrl="ROSS.asmx" publishTime="04/24/2008 18:23:37" />
+    <file relUrl="bin/Web.config" publishTime="07/31/2010 10:48:00" />
+    <file relUrl="bin/ROSS.dll" publishTime="11/25/2010 08:02:47" />
+    <file relUrl="Web.config" publishTime="07/31/2010 10:48:00" />
+  </publishTarget>
+  <publishTarget publishUrl="D:\Web_Services\">
+    <file relUrl="bin/ROSS.pdb" publishTime="07/31/2010 15:43:57" />
+    <file relUrl="ROSS.asmx" publishTime="04/24/2008 18:23:37" />
+    <file relUrl="bin/Web.config" publishTime="07/31/2010 10:48:00" />
+    <file relUrl="bin/ROSS.dll" publishTime="07/31/2010 15:43:57" />
+    <file relUrl="Web.config" publishTime="07/31/2010 10:48:00" />
+  </publishTarget>
+  <publishTarget publishUrl="http://localhost/">
+    <file relUrl="bin/ROSS.dll" publishTime="07/31/2010 10:53:34" />
+    <file relUrl="ROSS.asmx" publishTime="04/24/2008 18:23:37" />
+    <file relUrl="bin/Web.config" publishTime="07/31/2010 10:48:00" />
+    <file relUrl="Web.config" publishTime="07/31/2010 10:48:00" />
+    <file relUrl="bin/ROSS.pdb" publishTime="07/31/2010 10:53:34" />
+  </publishTarget>
+  <publishTarget publishUrl="http://localhost/ROSS/">
+    <file relUrl="bin/ROSS.dll" publishTime="07/31/2010 10:48:28" />
+    <file relUrl="bin/ROSS.pdb" publishTime="07/31/2010 10:48:27" />
+    <file relUrl="ROSS.asmx" publishTime="04/24/2008 18:23:37" />
+    <file relUrl="bin/Web.config" publishTime="07/31/2010 10:48:00" />
+    <file relUrl="Web.config" publishTime="07/31/2010 10:48:00" />
+  </publishTarget>
+</publishData>

@@ -1,0 +1,982 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AllowCancelFood">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AllowCancelFoodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AllowCancelFoodResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AllowPresentFood">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AllowPresentFoodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AllowPresentFoodResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CurrentTableExistFood">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tableno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="foodname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CurrentTableExistFoodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CurrentTableExistFoodResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrentTableAllowCancelFoodQty">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tableno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="foodname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrentTableAllowCancelFoodQtyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetCurrentTableAllowCancelFoodQtyResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogOn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="WriteDog" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogOnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LogOnResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogOff">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="WriteDog" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogOffResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LogOffResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="target" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="itemcount" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageno" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="tableno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="billno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="foodquery" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OpenTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tableno" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="openpsncount" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OpenTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OpenTableResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddFoodToConsumeBill">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tableno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="billno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="foodcode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="addquantity" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="operandis" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tastes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddFoodToConsumeBillResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddFoodToConsumeBillResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddFoodToCancelBill">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tableno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="billno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="foodcode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="decquantity" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddFoodToCancelBillResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddFoodToCancelBillResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddSuitToBill">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tableno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="suitcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="billno" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="suitquantity" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddSuitToBillResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddSuitToBillResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransFood">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="foodname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tableno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="billno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="quantity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="operandis" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tastes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="opid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="barcode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="operatecode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="cancelrsn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransFoodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TransFoodResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewGuid">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetNewGuidResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNewGuidResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsCancelBill">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="billno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsCancelBillResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsCancelBillResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsPresentBill">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="billno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsPresentBillResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsPresentBillResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsCustomFood">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="foodcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsCustomFoodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsCustomFoodResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddBill">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tableno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="billtypename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddBillResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddBillResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBillTypeName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="billno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBillTypeNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBillTypeNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="srcTableno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dstTableno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MoveTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MoveTableResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTableStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Tableno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTableStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTableStatusResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CombineTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="srcTableno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dstTableno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CombineTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CombineTableResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyTablePsnCount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Tableno" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="PsnCount" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ModifyTablePsnCountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ModifyTablePsnCountResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AllowCancelFoodSoapIn">
+    <wsdl:part name="parameters" element="tns:AllowCancelFood" />
+  </wsdl:message>
+  <wsdl:message name="AllowCancelFoodSoapOut">
+    <wsdl:part name="parameters" element="tns:AllowCancelFoodResponse" />
+  </wsdl:message>
+  <wsdl:message name="AllowPresentFoodSoapIn">
+    <wsdl:part name="parameters" element="tns:AllowPresentFood" />
+  </wsdl:message>
+  <wsdl:message name="AllowPresentFoodSoapOut">
+    <wsdl:part name="parameters" element="tns:AllowPresentFoodResponse" />
+  </wsdl:message>
+  <wsdl:message name="CurrentTableExistFoodSoapIn">
+    <wsdl:part name="parameters" element="tns:CurrentTableExistFood" />
+  </wsdl:message>
+  <wsdl:message name="CurrentTableExistFoodSoapOut">
+    <wsdl:part name="parameters" element="tns:CurrentTableExistFoodResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentTableAllowCancelFoodQtySoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrentTableAllowCancelFoodQty" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrentTableAllowCancelFoodQtySoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrentTableAllowCancelFoodQtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogOnSoapIn">
+    <wsdl:part name="parameters" element="tns:LogOn" />
+  </wsdl:message>
+  <wsdl:message name="LogOnSoapOut">
+    <wsdl:part name="parameters" element="tns:LogOnResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogOffSoapIn">
+    <wsdl:part name="parameters" element="tns:LogOff" />
+  </wsdl:message>
+  <wsdl:message name="LogOffSoapOut">
+    <wsdl:part name="parameters" element="tns:LogOffResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="GetDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="OpenTableSoapIn">
+    <wsdl:part name="parameters" element="tns:OpenTable" />
+  </wsdl:message>
+  <wsdl:message name="OpenTableSoapOut">
+    <wsdl:part name="parameters" element="tns:OpenTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddFoodToConsumeBillSoapIn">
+    <wsdl:part name="parameters" element="tns:AddFoodToConsumeBill" />
+  </wsdl:message>
+  <wsdl:message name="AddFoodToConsumeBillSoapOut">
+    <wsdl:part name="parameters" element="tns:AddFoodToConsumeBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddFoodToCancelBillSoapIn">
+    <wsdl:part name="parameters" element="tns:AddFoodToCancelBill" />
+  </wsdl:message>
+  <wsdl:message name="AddFoodToCancelBillSoapOut">
+    <wsdl:part name="parameters" element="tns:AddFoodToCancelBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddSuitToBillSoapIn">
+    <wsdl:part name="parameters" element="tns:AddSuitToBill" />
+  </wsdl:message>
+  <wsdl:message name="AddSuitToBillSoapOut">
+    <wsdl:part name="parameters" element="tns:AddSuitToBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="TransFoodSoapIn">
+    <wsdl:part name="parameters" element="tns:TransFood" />
+  </wsdl:message>
+  <wsdl:message name="TransFoodSoapOut">
+    <wsdl:part name="parameters" element="tns:TransFoodResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewGuidSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNewGuid" />
+  </wsdl:message>
+  <wsdl:message name="GetNewGuidSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewGuidResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsCancelBillSoapIn">
+    <wsdl:part name="parameters" element="tns:IsCancelBill" />
+  </wsdl:message>
+  <wsdl:message name="IsCancelBillSoapOut">
+    <wsdl:part name="parameters" element="tns:IsCancelBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsPresentBillSoapIn">
+    <wsdl:part name="parameters" element="tns:IsPresentBill" />
+  </wsdl:message>
+  <wsdl:message name="IsPresentBillSoapOut">
+    <wsdl:part name="parameters" element="tns:IsPresentBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsCustomFoodSoapIn">
+    <wsdl:part name="parameters" element="tns:IsCustomFood" />
+  </wsdl:message>
+  <wsdl:message name="IsCustomFoodSoapOut">
+    <wsdl:part name="parameters" element="tns:IsCustomFoodResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddBillSoapIn">
+    <wsdl:part name="parameters" element="tns:AddBill" />
+  </wsdl:message>
+  <wsdl:message name="AddBillSoapOut">
+    <wsdl:part name="parameters" element="tns:AddBillResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBillTypeNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBillTypeName" />
+  </wsdl:message>
+  <wsdl:message name="GetBillTypeNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBillTypeNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="MoveTableSoapIn">
+    <wsdl:part name="parameters" element="tns:MoveTable" />
+  </wsdl:message>
+  <wsdl:message name="MoveTableSoapOut">
+    <wsdl:part name="parameters" element="tns:MoveTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTableStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTableStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetTableStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTableStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="CombineTableSoapIn">
+    <wsdl:part name="parameters" element="tns:CombineTable" />
+  </wsdl:message>
+  <wsdl:message name="CombineTableSoapOut">
+    <wsdl:part name="parameters" element="tns:CombineTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="ModifyTablePsnCountSoapIn">
+    <wsdl:part name="parameters" element="tns:ModifyTablePsnCount" />
+  </wsdl:message>
+  <wsdl:message name="ModifyTablePsnCountSoapOut">
+    <wsdl:part name="parameters" element="tns:ModifyTablePsnCountResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="AllowCancelFood">
+      <wsdl:input message="tns:AllowCancelFoodSoapIn" />
+      <wsdl:output message="tns:AllowCancelFoodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AllowPresentFood">
+      <wsdl:input message="tns:AllowPresentFoodSoapIn" />
+      <wsdl:output message="tns:AllowPresentFoodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CurrentTableExistFood">
+      <wsdl:input message="tns:CurrentTableExistFoodSoapIn" />
+      <wsdl:output message="tns:CurrentTableExistFoodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentTableAllowCancelFoodQty">
+      <wsdl:input message="tns:GetCurrentTableAllowCancelFoodQtySoapIn" />
+      <wsdl:output message="tns:GetCurrentTableAllowCancelFoodQtySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogOn">
+      <wsdl:input message="tns:LogOnSoapIn" />
+      <wsdl:output message="tns:LogOnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogOff">
+      <wsdl:input message="tns:LogOffSoapIn" />
+      <wsdl:output message="tns:LogOffSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <wsdl:input message="tns:GetDataSoapIn" />
+      <wsdl:output message="tns:GetDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OpenTable">
+      <wsdl:input message="tns:OpenTableSoapIn" />
+      <wsdl:output message="tns:OpenTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFoodToConsumeBill">
+      <wsdl:input message="tns:AddFoodToConsumeBillSoapIn" />
+      <wsdl:output message="tns:AddFoodToConsumeBillSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFoodToCancelBill">
+      <wsdl:input message="tns:AddFoodToCancelBillSoapIn" />
+      <wsdl:output message="tns:AddFoodToCancelBillSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSuitToBill">
+      <wsdl:input message="tns:AddSuitToBillSoapIn" />
+      <wsdl:output message="tns:AddSuitToBillSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TransFood">
+      <wsdl:input message="tns:TransFoodSoapIn" />
+      <wsdl:output message="tns:TransFoodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewGuid">
+      <wsdl:input message="tns:GetNewGuidSoapIn" />
+      <wsdl:output message="tns:GetNewGuidSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsCancelBill">
+      <wsdl:input message="tns:IsCancelBillSoapIn" />
+      <wsdl:output message="tns:IsCancelBillSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsPresentBill">
+      <wsdl:input message="tns:IsPresentBillSoapIn" />
+      <wsdl:output message="tns:IsPresentBillSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsCustomFood">
+      <wsdl:input message="tns:IsCustomFoodSoapIn" />
+      <wsdl:output message="tns:IsCustomFoodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBill">
+      <wsdl:input message="tns:AddBillSoapIn" />
+      <wsdl:output message="tns:AddBillSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBillTypeName">
+      <wsdl:input message="tns:GetBillTypeNameSoapIn" />
+      <wsdl:output message="tns:GetBillTypeNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveTable">
+      <wsdl:input message="tns:MoveTableSoapIn" />
+      <wsdl:output message="tns:MoveTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTableStatus">
+      <wsdl:input message="tns:GetTableStatusSoapIn" />
+      <wsdl:output message="tns:GetTableStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CombineTable">
+      <wsdl:input message="tns:CombineTableSoapIn" />
+      <wsdl:output message="tns:CombineTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyTablePsnCount">
+      <wsdl:input message="tns:ModifyTablePsnCountSoapIn" />
+      <wsdl:output message="tns:ModifyTablePsnCountSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AllowCancelFood">
+      <soap:operation soapAction="http://tempuri.org/AllowCancelFood" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllowPresentFood">
+      <soap:operation soapAction="http://tempuri.org/AllowPresentFood" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CurrentTableExistFood">
+      <soap:operation soapAction="http://tempuri.org/CurrentTableExistFood" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentTableAllowCancelFoodQty">
+      <soap:operation soapAction="http://tempuri.org/GetCurrentTableAllowCancelFoodQty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOn">
+      <soap:operation soapAction="http://tempuri.org/LogOn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOff">
+      <soap:operation soapAction="http://tempuri.org/LogOff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OpenTable">
+      <soap:operation soapAction="http://tempuri.org/OpenTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFoodToConsumeBill">
+      <soap:operation soapAction="http://tempuri.org/AddFoodToConsumeBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFoodToCancelBill">
+      <soap:operation soapAction="http://tempuri.org/AddFoodToCancelBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSuitToBill">
+      <soap:operation soapAction="http://tempuri.org/AddSuitToBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransFood">
+      <soap:operation soapAction="http://tempuri.org/TransFood" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewGuid">
+      <soap:operation soapAction="http://tempuri.org/GetNewGuid" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsCancelBill">
+      <soap:operation soapAction="http://tempuri.org/IsCancelBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsPresentBill">
+      <soap:operation soapAction="http://tempuri.org/IsPresentBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsCustomFood">
+      <soap:operation soapAction="http://tempuri.org/IsCustomFood" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBill">
+      <soap:operation soapAction="http://tempuri.org/AddBill" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillTypeName">
+      <soap:operation soapAction="http://tempuri.org/GetBillTypeName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveTable">
+      <soap:operation soapAction="http://tempuri.org/MoveTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTableStatus">
+      <soap:operation soapAction="http://tempuri.org/GetTableStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CombineTable">
+      <soap:operation soapAction="http://tempuri.org/CombineTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyTablePsnCount">
+      <soap:operation soapAction="http://tempuri.org/ModifyTablePsnCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AllowCancelFood">
+      <soap12:operation soapAction="http://tempuri.org/AllowCancelFood" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllowPresentFood">
+      <soap12:operation soapAction="http://tempuri.org/AllowPresentFood" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CurrentTableExistFood">
+      <soap12:operation soapAction="http://tempuri.org/CurrentTableExistFood" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentTableAllowCancelFoodQty">
+      <soap12:operation soapAction="http://tempuri.org/GetCurrentTableAllowCancelFoodQty" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOn">
+      <soap12:operation soapAction="http://tempuri.org/LogOn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogOff">
+      <soap12:operation soapAction="http://tempuri.org/LogOff" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <soap12:operation soapAction="http://tempuri.org/GetData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OpenTable">
+      <soap12:operation soapAction="http://tempuri.org/OpenTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFoodToConsumeBill">
+      <soap12:operation soapAction="http://tempuri.org/AddFoodToConsumeBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFoodToCancelBill">
+      <soap12:operation soapAction="http://tempuri.org/AddFoodToCancelBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSuitToBill">
+      <soap12:operation soapAction="http://tempuri.org/AddSuitToBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransFood">
+      <soap12:operation soapAction="http://tempuri.org/TransFood" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewGuid">
+      <soap12:operation soapAction="http://tempuri.org/GetNewGuid" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsCancelBill">
+      <soap12:operation soapAction="http://tempuri.org/IsCancelBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsPresentBill">
+      <soap12:operation soapAction="http://tempuri.org/IsPresentBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsCustomFood">
+      <soap12:operation soapAction="http://tempuri.org/IsCustomFood" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBill">
+      <soap12:operation soapAction="http://tempuri.org/AddBill" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBillTypeName">
+      <soap12:operation soapAction="http://tempuri.org/GetBillTypeName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MoveTable">
+      <soap12:operation soapAction="http://tempuri.org/MoveTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTableStatus">
+      <soap12:operation soapAction="http://tempuri.org/GetTableStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CombineTable">
+      <soap12:operation soapAction="http://tempuri.org/CombineTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyTablePsnCount">
+      <soap12:operation soapAction="http://tempuri.org/ModifyTablePsnCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://192.168.1.166/ROSS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://192.168.1.166/ROSS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

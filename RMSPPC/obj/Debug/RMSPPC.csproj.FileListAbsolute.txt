@@ -1,0 +1,21 @@
+D:\workspace\餐厅管家\RMS_PPC 3\bin\Debug\RMSPPC.exe
+D:\workspace\餐厅管家\RMS_PPC 3\bin\Debug\RMSPPC.pdb
+D:\workspace\餐厅管家\RMS_PPC 3\obj\Debug\ResolveAssemblyReference.cache
+D:\workspace\餐厅管家\RMS_PPC 3\obj\Debug\RMS_PPC_3.Form1.resources
+D:\workspace\餐厅管家\RMS_PPC 3\obj\Debug\RMSPPC.csproj.GenerateResource.Cache
+D:\workspace\餐厅管家\RMS_PPC 3\obj\Debug\RMSPPC.exe
+D:\workspace\餐厅管家\RMS_PPC 3\obj\Debug\RMSPPC.pdb
+D:\workspace\餐厅管家\RMSPPC\bin\Debug\RMSPPC.exe
+D:\workspace\餐厅管家\RMSPPC\bin\Debug\RMSPPC.pdb
+D:\workspace\餐厅管家\RMSPPC\obj\Debug\ResolveAssemblyReference.cache
+D:\workspace\餐厅管家\RMSPPC\obj\Debug\RMSPPC.Form1.resources
+D:\workspace\餐厅管家\RMSPPC\obj\Debug\RMSPPC.csproj.GenerateResource.Cache
+D:\workspace\餐厅管家\RMSPPC\obj\Debug\RMSPPC.exe
+D:\workspace\餐厅管家\RMSPPC\obj\Debug\RMSPPC.pdb
+D:\Project\Caesar_System\RMS\trunk\RMSPPC\bin\Debug\RMSPPC.exe
+D:\Project\Caesar_System\RMS\trunk\RMSPPC\bin\Debug\RMSPPC.pdb
+D:\Project\Caesar_System\RMS\trunk\RMSPPC\obj\Debug\ResolveAssemblyReference.cache
+D:\Project\Caesar_System\RMS\trunk\RMSPPC\obj\Debug\RMSPPC.Form1.resources
+D:\Project\Caesar_System\RMS\trunk\RMSPPC\obj\Debug\RMSPPC.csproj.GenerateResource.Cache
+D:\Project\Caesar_System\RMS\trunk\RMSPPC\obj\Debug\RMSPPC.exe
+D:\Project\Caesar_System\RMS\trunk\RMSPPC\obj\Debug\RMSPPC.pdb

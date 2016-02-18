@@ -1,0 +1,15 @@
+D:\workspace\餐厅管家\RMS_PPC 3\RMS_PPC 3\obj\Debug\ResolveAssemblyReference.cache
+D:\workspace\餐厅管家\RMS_PPC 3\RMS_PPC 3\obj\Debug\RMS_PPC_3.Form1.resources
+D:\workspace\餐厅管家\RMS_PPC 3\RMS_PPC 3\obj\Debug\RMS_PPC 3.csproj.GenerateResource.Cache
+D:\workspace\餐厅管家\RMS_PPC 3\RMS_PPC 3\bin\Debug\JD_Food.exe.config
+D:\workspace\餐厅管家\RMS_PPC 3\RMS_PPC 3\bin\Debug\Carrey_Food.exe
+D:\workspace\餐厅管家\RMS_PPC 3\RMS_PPC 3\bin\Debug\Carrey_Food.pdb
+D:\workspace\餐厅管家\RMS_PPC 3\RMS_PPC 3\obj\Debug\Carrey_Food.exe
+D:\workspace\餐厅管家\RMS_PPC 3\RMS_PPC 3\obj\Debug\Carrey_Food.pdb
+D:\workspace\餐厅管家\RMS_PPC 3\bin\Debug\RMS_PPC 3.exe
+D:\workspace\餐厅管家\RMS_PPC 3\bin\Debug\RMS_PPC 3.pdb
+D:\workspace\餐厅管家\RMS_PPC 3\obj\Debug\ResolveAssemblyReference.cache
+D:\workspace\餐厅管家\RMS_PPC 3\obj\Debug\RMS_PPC_3.Form1.resources
+D:\workspace\餐厅管家\RMS_PPC 3\obj\Debug\RMS_PPC 3.csproj.GenerateResource.Cache
+D:\workspace\餐厅管家\RMS_PPC 3\obj\Debug\RMS_PPC 3.exe
+D:\workspace\餐厅管家\RMS_PPC 3\obj\Debug\RMS_PPC 3.pdb
